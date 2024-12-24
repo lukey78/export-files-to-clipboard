@@ -1,8 +1,14 @@
-# export-files-to-clipboard
+# Export files to clipboard
 
 ![Build](https://github.com/lukey78/export-files-to-clipboard/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
+
+This plugin allows you to click on a directory in the project view and export the file contents 
+to the clipboard. 
+
+Suitable e.g. for exporting directory trees as context for AI tools like ChatGPT.
+
 
 ## Template ToDo list
 - [x] Create a new [IntelliJ Platform Plugin Template][template] project.
@@ -28,7 +34,7 @@ To keep everything working, do not remove `<!-- ... -->` sections.
 
 - Using the IDE built-in plugin system:
   
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "export-files-to-clipboard"</kbd> >
+  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Export files to clipboard"</kbd> >
   <kbd>Install</kbd>
   
 - Using JetBrains Marketplace:

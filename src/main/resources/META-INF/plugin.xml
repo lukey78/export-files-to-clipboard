@@ -1,18 +1,21 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.lukey78.exportfilestoclipboard</id>
-    <name>export-files-to-clipboard</name>
-    <vendor>lukey78</vendor>
+    <name>Export files to clipboard</name>
+    <vendor>Jens Hassler</vendor>
 
+    <description>
+        This plugin allows you to click on a directory in the project view and export the file contents
+        to the clipboard including the path of the file inside the project.
+
+        Suitable e.g. for exporting directory trees as context for AI tools like ChatGPT.
+    </description>
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
-
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.lukey78.exportfilestoclipboard.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-    </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.lukey78.exportfilestoclipboard.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
+    <actions>
+        <action id="ExportToClipboard" class="com.github.lukey78.exportfilestoclipboard.ExportFilesToClipboardAction"
+                text="Export Files to Clipboard" description="Export all file content in this directory to the clipboard">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        </action>
+    </actions>
 </idea-plugin>
